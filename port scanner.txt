@@ -1,0 +1,46 @@
+# Simple Python Port Scanner
+# Author: Behruzbek
+
+import socket
+
+
+def scan_port(target, port):
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.settimeout(0.5)
+
+    result = s.connect_ex((target, port))
+    s.close()
+
+    if result == 0:
+        return True
+    else:
+        return False
+
+
+def main():
+    print("=" * 35)
+    print("     SIMPLE PORT SCANNER")
+    print("=" * 35)
+
+    target = input("Target IP or domain: ")
+
+    try:
+        target_ip = socket.gethostbyname(target)
+    except socket.gaierror:
+        print("Invalid target")
+        return
+
+    start_port = int(input("Start port: "))
+    end_port = int(input("End port: "))
+
+    print(f"\nScanning {target_ip}...\n")
+
+    for port in range(start_port, end_port + 1):
+        if scan_port(target_ip, port):
+            print(f"[OPEN] Port {port}")
+
+    print("\nScan finished.")
+
+
+if __name__ == "__main__":
+    main()
