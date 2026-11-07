@@ -1,17 +1,13 @@
 # Python Port Scanner
 
-> A small Python learning project for understanding TCP connections, ports, and service discovery in authorized environments.
+A small Python learning project for understanding TCP connections, ports, and service discovery in authorized environments.
 
-[![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![Learning project](https://img.shields.io/badge/type-learning%20project-6E7781)](#roadmap)
-[![Authorized use](https://img.shields.io/badge/use-authorized%20testing-2F6FEB)](#responsible-use)
+## What I’m learning
 
-## Learning goals
-
-- Understand TCP connection attempts and timeouts.
-- Practice Python networking fundamentals.
-- Report reachable ports clearly.
-- Build a foundation for defensive asset inventory.
+- How TCP connection attempts and timeouts work
+- Python networking fundamentals
+- How to report reachable ports clearly
+- How port information can support defensive asset inventory
 
 ## Usage
 
@@ -19,20 +15,12 @@
 python3 <entry-point>.py --help
 ```
 
-Use the entry-point file present in the repository. Start with `localhost` or a private lab host and keep the port range small while learning.
+Use the entry-point file included in this repository. When learning, start with `localhost` or a private lab host and keep the port range small.
 
 ## Responsible use
 
-Run this tool only against systems you own or are explicitly authorized to test. Never use it to evade controls, disrupt services, or scan public infrastructure without permission.
+Run this tool only against systems you own or have explicit authorization to test. Do not use it to evade controls, disrupt services, or scan public infrastructure without permission.
 
-## Roadmap
+## About
 
-- Add robust CLI argument validation.
-- Add bounded concurrency and configurable timeouts.
-- Add unit tests for parsing and reporting.
-- Export results as JSON for lab inventories.
-- Add safe defaults that target localhost.
-
-## Author
-
-Behruzbek Sharifjonov — cybersecurity learner and responsible security researcher.
+Created by Behruzbek Sharifjonov as a hands-on project for practicing Python and networking basics. This is a learning project, not a substitute for professional security assessment tools or procedures.
